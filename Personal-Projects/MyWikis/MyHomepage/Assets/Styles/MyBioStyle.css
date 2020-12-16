@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+:root {
+  --Color1:white;
+  --Color2: rgb(20, 20, 20);
+  --Color4: rgb(40, 40, 40);
+  --Color3: rgb(50, 50, 50);
+--Font1:'Times New Roman', Times, serif;
+--Font2:'Times New Roman', Times, serif;
+--Font3:'Times New Roman', Times, serif;
+
+--BarPadding: 10px;
+--BarMargin1: 0px;
+--BarMargin2: 10px;
+--BarWidth: 100%;
+--BarHeight: Auto;
+
+
+--SmallPanelWidth: 24%;
+--SmallPanelHeight: 400px;
+--SmallPanelMargin: 0.5%;
+--SmallPanelPadding: 10px;
+
+--TextSize1: 20%;
+--TextSize2: 40%;
+--TextSize3: 80%;
+--TextSize4: 100%;
+--TextSize5: 120%;
+--TextSize6: 140%;
+--TextSize7: 160%;
+--TextSize8: 180%;
+--TextSize9: 200%;
+--TextSize10: 220%;
+--TextSize11: 240%;
+--TextSize12: 260%;
+--TextSize13: 280%;
+--TextSize14: 300%;
+--TextSize15: 320%;
+--TextSize16: 340%;
+--TextFrameWidth: 100%;
+--TextFrameHeight: 90%;
+}
+
+
+
+
+  
+  #frame { 
+    width:  var(--TextFrameWidth); 
+    height: var(--TextFrameHeight); 
+    border: 0px solid black; 
+    overflow: hidden
+  }
+  
+
+.Background{
+    background-color: var(--Color2);
+  }
+
+
+
+
+.TopBar{
+    background-color: var(--Color3);
+    font-family: var(--Font1);
+    color: var(--Color1);
+    margin-top: var(--BarMargin1);
+    margin-bottom: var(--BarMargin2);
+    padding: var(--BarPadding);
+    width: var(--BarWidth);
+    height: var(--BarHeight);
+  }
+
+  .TopBar h1{
+    font-family: var(--Font2);
+    font-size: var(--TextSize13);
+    color: var(--Color1);
+
+}
+
+.TopBar p{
+    font-family: var(--Font2);
+    font-size: var(--TextSize4);
+    color: var(--Color1);
+
+}
+
+  .BottomBar{
+    background-color: var(--Color3);
+    font-family: var(--Font1);
+    color: var(--Color1);
+    margin-top: var(--BarMargin2);
+    margin-bottom: var(--BarMargin1);
+    padding: var(--BarPadding);
+    width: var(--BarWidth);
+    height: var(--BarHeight);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  .BottomBar h1{
+    font-family: var(--Font1);
+    font-size: var(--TextSize4);
+    color: var(--Color1);
+}
+
+ .BottomBar p{
+  font-family: var(--Font2);
+  font-size: var(--TextSize2);
+  color: var(--Color1);
+ }
+
+
+
+
+
+  .QuarterPanel{
+    border: solid ;
+    border-color: var(--Color4); ;
+    border-top-width: 15px ;
+
+    background-color: var(--Color3);
+    font-family: var(--Font1);
+    color: var(--Color1);
+    width: var(--SmallPanelWidth);
+    height: var(--SmallPanelHeight);
+    margin: var(--SmallPanelMargin);
+    padding: var(--SmallPanelPadding);
+    float: left;
+  }
+
+  .QuarterPanel p{
+    font-family: var(--Font1);
+    font-size: var(--TextSize5);
+    color: var(--Color2);
+  }
+
+  .QuarterPanel h1{
+    font-family: var(--Font1);
+    font-size: var(--TextSize9);
+    color: var(--Color1);
+  }
+
+
+
+
+
+  .TXTFrame p{
+    font-family: var(--Font2);
+    font-size: var(--TextSize5);
+    color: var(--Color1);
+  }
+
+  .TXTFrame h1{
+    font-family: var(--Font2);
+    font-size: var(--TextSize6);
+    color: var(--Color1);
+  }
+
+
+  .TXTFrame a{
+    target="_Parent"
+  }

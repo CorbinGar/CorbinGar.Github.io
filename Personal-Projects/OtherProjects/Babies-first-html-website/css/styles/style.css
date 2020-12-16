@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.whole{
+  background-color: powderblue;
+}
+
+
+
+.TitleBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1D88E5;
+  font-family: 'Times New Roman', Times, serif;
+  color: navy;
+  padding: 10px;
+}
+
+.TitleBar h1{
+  color: navy;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 200%;
+}
+
+.TitleBar p{
+  color:  navy;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 160%;
+}
+
+
+
+
+.SmallPanel{
+  background-color: #1D88E5;
+  min-height: 150px;
+  min-width: 200px;
+  max-height: 25%;
+  max-width: 25%;
+  margin: 10px;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: navy;
+  float: left;
+}
+
+.SmallPanel h1{
+  color:  navy);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 160%;
+}
+
+.SmallPanel p{
+  color:  navy);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 120%;
+}
+
+
+
+
+.SidePanel {
+  background-color: #1D88E5;
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 600px;
+  min-width: 150px;
+  max-height: 50%;
+  max-width: 25%;
+  margin: 10px;
+  padding: 20px;
+  color:navy;
+  float: right;
+}
+
+.SidePanel p{
+  color: navy);
+  font-family: 'Times New Roman', Times, serif;
+   font-size: 120%;
+}
+
+
+
+
+.BigPanel {
+  background-color: #1D88E5;
+  font-family: 'Times New Roman', Times, serif;
+  max height: 25%;
+  max width: 50%;
+  margin: 10px;
+  padding: 20px;
+  color: navy;
+  float: left;
+}
