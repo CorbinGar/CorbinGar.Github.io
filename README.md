@@ -1,2 +1,0 @@
-# corbingar.github.io
-Corbin
