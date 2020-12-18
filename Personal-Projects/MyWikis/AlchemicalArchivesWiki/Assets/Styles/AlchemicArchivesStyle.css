@@ -5,12 +5,18 @@
   }
 
 :root {
+  /*i like to use variables to make it so i can change most things about a program from a command panel of sorts, from here i can change the theme size and fonts of any page using this as their style*/
+  /* Define the colors that will later be used to style the page*/
 --Color1:white;
 --Color2: rgb(20, 20, 20);
 --Color4: rgb(40, 40, 40);
 --Color3: rgb(50, 50, 50);
---Color5: rgb(40, 40, 40);
---Color6: rgb(40, 40, 40);
+--Color5: rgb(60, 60, 60);
+--Color6: rgb(70, 60, 70);
+--Color7: rgb(0, 150, 225);
+--Color8: rgb(0, 128, 255);
+
+  /* Define the Fonts that will later be used to style the page*/
 --Font1:'Times New Roman', Times, serif;
 --Font2:'Times New Roman', Times, serif;
 --Font3:'Times New Roman', Times, serif;
@@ -18,23 +24,37 @@
 --Font5:'Times New Roman', Times, serif;
 --Font6:'Times New Roman', Times, serif;
 
+
+  /* Define the aspects of the top and bottom bar*/
 --BarPadding: 10px;
 --BarMargin1: 0px;
 --BarMargin2: 10px;
 --BarWidth: 100%;
 --BarHeight: Auto;
 
+
+
+  /* Define the aspects of A Full page panel*/
 --FullPanelWidth: 99%;
 --FullPanelHeight: 400px;
+
+  /* Define the aspects of A Panel that takes up three fourths of the page*/
 --ThreeQuarterPanelWidth: 74%;
 --ThreeQuarterPanelHeight: 400px;
+
+  /* Define the aspects of A Panel that takes up Half of the page*/
 --HalfPanelWidth: 49%;
 --HalfPanelHeight: 400px;
+
+  /* Define the aspects of A Panel that takes up a quarter of the page*/
 --QuarterPanelWidth: 24%;
 --QuarterPanelHeight: 400px;
+
+  /* Define the aspects of all panels*/
 --PanelMargin: 0.5%;
 --PanelPadding: 10px;
 
+  /* Define the various text sizes that can be used*/
 --TextSize1: 20%;
 --TextSize2: 40%;
 --TextSize3: 80%;
@@ -51,14 +71,20 @@
 --TextSize14: 300%;
 --TextSize15: 320%;
 --TextSize16: 340%;
+
+  /*Define the Iframe width and Height for later use*/
 --TextFrameWidth: 100%;
 --TextFrameHeight: 90%;
 }
 
 
+ /*Change the default link color to match theme*/
+a {
+  color: var(--Color7);
+}
 
 
-  
+   /*Change the Styling of the iframes used in the pages*/
   #frame { 
     width:  var(--TextFrameWidth); 
     height: var(--TextFrameHeight); 
@@ -66,11 +92,13 @@
     overflow: hidden
   }
   
-
+  /*apply style to background*/
 .Background{
     background-color: var(--Color2);
   }
 
+
+  /*Create A Bar class that can be placed at the top or bottom of a page*/
 .Bar{
     background-color: var(--Color3);
     font-family: var(--Font1);
@@ -90,25 +118,22 @@
     font-family: var(--Font2);
     font-size: var(--TextSize13);
     color: var(--Color1);
+  }
 
-}
-
-.Bar p{
+  .Bar p{
     font-family: var(--Font2);
     font-size: var(--TextSize4);
     color: var(--Color1);
-
-}
-
+  }
 
 
 
+ /*Define the class for Quarter panels*/
   .QuarterPanel{
     border: solid ;
     border-color: var(--Color4); ;
     border-top-width: 10px ;
     border-bottom-width: 10px ;
-
     background-color: var(--Color3);
     font-family: var(--Font1);
     color: var(--Color1);
@@ -132,13 +157,12 @@
   }
 
 
-
+/*Define the class for Three Quarter panels*/
   .ThreeQuarterPanel{
     border: solid ;
     border-color: var(--Color4); ;
     border-top-width: 10px ;
     border-bottom-width: 10px ;
-
     background-color: var(--Color3);
     font-family: var(--Font1);
     color: var(--Color1);
@@ -163,13 +187,12 @@
 
 
 
-
+/*Define the class for Half panels*/
   .HalfPanel{
     border: solid ;
     border-color: var(--Color4); ;
     border-top-width: 10px ;
     border-bottom-width: 10px ;
-
     background-color: var(--Color3);
     font-family: var(--Font1);
     color: var(--Color1);
@@ -193,13 +216,12 @@
   }
 
 
-
+/*Define the class for Full panels*/
   .FullPanel{
     border: solid ;
     border-color: var(--Color4); ;
     border-top-width: 10px ;
     border-bottom-width: 10px ;
-
     background-color: var(--Color3);
     font-family: var(--Font1);
     color: var(--Color1);
@@ -228,7 +250,7 @@
 
 
 
-
+/*Define the class for The Iframes used in all panels*/
 
   .TXTFrame p{
     font-family: var(--Font2);
