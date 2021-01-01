@@ -1,266 +1,383 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/*---------------------------------------------------- Varaiables ---------------------------------------------------- */
+:root{
+  --Font1:'Times New Roman', Times, serif;
+  --Font2:'Times New Roman', Times, serif;
+  --Font3:'Times New Roman', Times, serif;
+  --Font4:'Times New Roman', Times, serif;
+  --Font5:'Times New Roman', Times, serif;
+  --Font6:'Times New Roman', Times, serif;
+
+  --TextColor1: white;
+  --TextColor2: rgb(210, 210, 210);
+  --TextColor3: rgb(40, 40, 40);
+
+  --LinkColor1: rgb(0, 150, 225);
+  --LinkColor2: rgb(40, 40, 40);
+  --LinkColor3: rgb(40, 40, 40);
+
+  --BackgroundColor1: rgb(20, 20, 20);
+
+  --AccentColor1: rgb(40, 40, 40);
+
+  --PanelColor1: rgb(50, 50, 50);
+
+  --PanelMargin1: 0.5%;
+  --PanelPadding1: 20px;
+  --PanelPadding2: 20px;
+
+  --TopBorderWidth1: 10px;
+  --BottomBorderWidth1: 10px;
+  --LeftBorderWidth1: 3px;
+  --RightBorderWidth1: 3px;
+
+  --TopBorderWidth2: 5px;
+  --BottomBorderWidth2: 5px;
+  --LeftBorderWidth2: 1px;
+  --RightBorderWidth2: 1px;
+
+  --PanelWidth-8: 8%;
+  --PanelWidth-12: 11.25%;
+  --PanelWidth-25: 24%;
+  --PanelWidth-33: 32%;
+  --PanelWidth-50: 49%;
+  --PanelWidth-66: 65%;
+  --PanelWidth-75: 74%;
+  --PanelWidth-100: 99%;
+  --PanelHeight-120: 100%;
+
+  --PanelHeight-8: 8%;
+  --PanelHeight-12: 11.5%;
+  --PanelHeight-25: 23.5%;
+  --PanelHeight-33: 32%;
+  --PanelHeight-50: 49%;
+  --PanelHeight-66: 65%;
+  --PanelHeight-75: 74%;
+  --PanelHeight-100: 99.9999%;
+  --PanelHeight-120: 100%;
+
+  --FontSize-1: 80%;
+  --FontSize0: 100%;
+  --FontSize1: 120%;
+  --FontSize2: 140%;
+  --FontSize3: 160%;
+  --FontSize4: 180%;
+  --FontSize5: 200%;
+  --FontSize6: 220%;
+  --FontSize7: 240%;
+  --FontSize8: 260%;
+  --FontSize9: 280%;
+  --FontSize10: 280%;
+}
+/*---------------------------------------------------- Varaiables End ---------------------------------------------------- */
+
+
+/*---------------------------------------------------- Others ---------------------------------------------------- */
+  iframe{
+      height: 85%; 
+      width: 100%;
+      background-color: var(--PanelColor1);
+  }
+  /* This allows Height Percentages to work beacuase css is dumb */
+  html, body {
+      height: 100%; 
+      width: 100%; 
+      margin: 0; 
+      background-color: var(--BackgroundColor1);
+  }
+/*---------------------------------------------------- Others End ---------------------------------------------------- */
+
+
+/*---------------------------------------------------- Text Styling ---------------------------------------------------- */
+  p{
+      color: var(--TextColor1);
+      font-family: var(--Font1);
+      font-size: var(--FontSize1);
+      line-height: 110%;
   }
 
-:root {
-  /*i like to use variables to make it so i can change most things about a program from a command panel of sorts, from here i can change the theme size and fonts of any page using this as their style*/
-  /* Define the colors that will later be used to style the page*/
---Color1:white;
---Color2: rgb(20, 20, 20);
---Color4: rgb(40, 40, 40);
---Color3: rgb(50, 50, 50);
---Color5: rgb(60, 60, 60);
---Color6: rgb(70, 60, 70);
---Color7: rgb(0, 150, 225);
---Color8: rgb(0, 128, 255);
-
-  /* Define the Fonts that will later be used to style the page*/
---Font1:'Times New Roman', Times, serif;
---Font2:'Times New Roman', Times, serif;
---Font3:'Times New Roman', Times, serif;
---Font4:'Times New Roman', Times, serif;
---Font5:'Times New Roman', Times, serif;
---Font6:'Times New Roman', Times, serif;
-
-
-  /* Define the aspects of the top and bottom bar*/
---BarPadding: 10px;
---BarMargin1: 0px;
---BarMargin2: 10px;
---BarWidth: 100%;
---BarHeight: Auto;
-
-
-
-  /* Define the aspects of A Full page panel*/
---FullPanelWidth: 99%;
---FullPanelHeight: 400px;
-
-  /* Define the aspects of A Panel that takes up three fourths of the page*/
---ThreeQuarterPanelWidth: 74%;
---ThreeQuarterPanelHeight: 400px;
-
-  /* Define the aspects of A Panel that takes up Half of the page*/
---HalfPanelWidth: 49%;
---HalfPanelHeight: 400px;
-
-  /* Define the aspects of A Panel that takes up a quarter of the page*/
---QuarterPanelWidth: 24%;
---QuarterPanelHeight: 400px;
-
-  /* Define the aspects of all panels*/
---PanelMargin: 0.5%;
---PanelPadding: 10px;
-
-  /* Define the various text sizes that can be used*/
---TextSize1: 20%;
---TextSize2: 40%;
---TextSize3: 80%;
---TextSize4: 100%;
---TextSize5: 120%;
---TextSize6: 140%;
---TextSize7: 160%;
---TextSize8: 180%;
---TextSize9: 200%;
---TextSize10: 220%;
---TextSize11: 240%;
---TextSize12: 260%;
---TextSize13: 280%;
---TextSize14: 300%;
---TextSize15: 320%;
---TextSize16: 340%;
-
-  /*Define the Iframe width and Height for later use*/
---TextFrameWidth: 100%;
---TextFrameHeight: 90%;
-}
-
-
- /*Change the default link color to match theme*/
-a {
-  color: var(--Color7);
-}
-
-
-   /*Change the Styling of the iframes used in the pages*/
-  #frame { 
-    width:  var(--TextFrameWidth); 
-    height: var(--TextFrameHeight); 
-    border: 0px solid black; 
-    overflow: hidden
+  h1{
+      color: var(--TextColor2);
+      font-family: var(--Font2);
+      font-size: var(--FontSize5);
+      font-weight: 900;
+      line-height: 110%;
   }
   
-  /*apply style to background*/
-.Background{
-    background-color: var(--Color2);
+  a {
+      color: var(--LinkColor1);
   }
+/*---------------------------------------------------- Text Styling End---------------------------------------------------- */
 
 
-  /*Create A Bar class that can be placed at the top or bottom of a page*/
-.Bar{
-    background-color: var(--Color3);
-    font-family: var(--Font1);
-    color: var(--Color1);
-    margin-top: var(--BarMargin1);
-    margin-bottom: var(--BarMargin2);
-    padding: var(--BarPadding);
-    width: var(--BarWidth);
-    height: var(--BarHeight);
-    border: solid ;
-    border-color: var(--Color4); ;
-    border-top-width: 5px ;
-    border-bottom-width: 5px ;
+/*---------------------------------------------------- Full Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+  .Bar{
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth2);
+      border-left-width: var(--LeftBorderWidth2);
+      border-top-width: var(--TopBorderWidth2);
+      border-bottom-width: var(--BottomBorderWidth2);
+      margin-bottom: var(--PanelMargin1);
+      /* Margin and padding */
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width:  100%;
+      height: 100px;
+      /* Other Variables */
   }
-
   .Bar h1{
-    font-family: var(--Font2);
-    font-size: var(--TextSize13);
-    color: var(--Color1);
+      font-size: var(--FontSize10); 
+      line-height: 80%;
   }
-
   .Bar p{
-    font-family: var(--Font2);
-    font-size: var(--TextSize4);
-    color: var(--Color1);
+      font-size: var(--FontSize1);
+      line-height: 0px;
+      line-height: 100%;
   }
+/*---------------------------------------------------- Full Panel End ---------------------------------------------------- */
 
 
 
- /*Define the class for Quarter panels*/
-  .QuarterPanel{
-    border: solid ;
-    border-color: var(--Color4); ;
-    border-top-width: 10px ;
-    border-bottom-width: 10px ;
-    background-color: var(--Color3);
-    font-family: var(--Font1);
-    color: var(--Color1);
-    width: var(--QuarterPanelWidth);
-    height: var(--QuarterPanelHeight);
-    margin: var(--PanelMargin);
-    padding: var(--PanelPadding);
-    float: left;
-  }
-
-  .QuarterPanel p{
-    font-family: var(--Font1);
-    font-size: var(--TextSize5);
-    color: var(--Color);
-  }
-
-  .QuarterPanel h1{
-    font-family: var(--Font1);
-    font-size: var(--TextSize9);
-    color: var(--Color1);
-  }
-
-
-/*Define the class for Three Quarter panels*/
-  .ThreeQuarterPanel{
-    border: solid ;
-    border-color: var(--Color4); ;
-    border-top-width: 10px ;
-    border-bottom-width: 10px ;
-    background-color: var(--Color3);
-    font-family: var(--Font1);
-    color: var(--Color1);
-    width: var(--ThreeQuarterPanelWidth);
-    height: var(--ThreeQuarterPanelHeight);
-    margin: var(--PanelMargin);
-    padding: var(--PanelPadding);
-    float: left;
-  }
-
-  .ThreeQuarterPanel p{
-    font-family: var(--Font1);
-    font-size: var(--TextSize5);
-    color: var(--Color);
-  }
-
-  .ThreeQuarterPanel h1{
-    font-family: var(--Font1);
-    font-size: var(--TextSize9);
-    color: var(--Color1);
-  }
-
-
-
-/*Define the class for Half panels*/
-  .HalfPanel{
-    border: solid ;
-    border-color: var(--Color4); ;
-    border-top-width: 10px ;
-    border-bottom-width: 10px ;
-    background-color: var(--Color3);
-    font-family: var(--Font1);
-    color: var(--Color1);
-    width: var(--HalfPanelWidth);
-    height: var(--HalfPanelHeight);
-    margin: var(--PanelMargin);
-    padding: var(--PanelPadding);
-    float: left;
-  }
-
-  .HalfPanel p{
-    font-family: var(--Font1);
-    font-size: var(--TextSize5);
-    color: var(--Color1);
-  }
-
-  .HalfPanel h1{
-    font-family: var(--Font1);
-    font-size: var(--TextSize9);
-    color: var(--Color1);
-  }
-
-
-/*Define the class for Full panels*/
+/*---------------------------------------------------- Full Panel Start ---------------------------------------------------- */
+  /* Panel styling */
   .FullPanel{
-    border: solid ;
-    border-color: var(--Color4); ;
-    border-top-width: 10px ;
-    border-bottom-width: 10px ;
-    background-color: var(--Color3);
-    font-family: var(--Font1);
-    color: var(--Color1);
-    width: var(--FullPanelWidth);
-    height: var(--FullPanelHeight);
-    margin: var(--PanelMargin);
-    padding: var(--PanelPadding);
-    float: left;
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth1);
+      border-left-width: var(--LeftBorderWidth1);
+      border-top-width: var(--TopBorderWidth1);
+      border-bottom-width: var(--BottomBorderWidth1);
+      /* Margin and padding */
+      margin: var(--PanelMargin1);
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width:  var(--PanelWidth-100);
+      height: var(--PanelHeight-50);
+      /* Other Variables */
+      float: left;
+      overflow: hidden;
   }
+/*---------------------------------------------------- Full Panel End ---------------------------------------------------- */
 
-  .FullPanel p{
-    font-family: var(--Font1);
-    font-size: var(--TextSize5);
-    color: var(--Color1);
+
+
+/*---------------------------------------------------- Large Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+  .LargePanel{
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth1);
+      border-left-width: var(--LeftBorderWidth1);
+      border-top-width: var(--TopBorderWidth1);
+      border-bottom-width: var(--BottomBorderWidth1);
+      /* Margin and padding */
+      margin: var(--PanelMargin1);
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width:  var(--PanelWidth-75);
+      height: var(--PanelHeight-50);
+      /* Other Variables */
+      float: left;
+      overflow: hidden;
   }
+/*---------------------------------------------------- Large Panel End ---------------------------------------------------- */
 
-  .FullPanel h1{
-    font-family: var(--Font1);
-    font-size: var(--TextSize9);
-    color: var(--Color1);
+
+
+/*---------------------------------------------------- Medium Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+  .MediumPanel{
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth1);
+      border-left-width: var(--LeftBorderWidth1);
+      border-top-width: var(--TopBorderWidth1);
+      border-bottom-width: var(--BottomBorderWidth1);
+      /* Margin and padding */
+      margin: var(--PanelMargin1);
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width:  var(--PanelWidth-50);
+      height: var(--PanelHeight-50);
+      /* Other Variables */
+      float: left;
+      overflow: hidden;
   }
+/*---------------------------------------------------- Medium Panel End ---------------------------------------------------- */
 
 
 
-
-
-
-
-/*Define the class for The Iframes used in all panels*/
-
-  .TXTFrame p{
-    font-family: var(--Font2);
-    font-size: var(--TextSize5);
-    color: var(--Color1);
+/*---------------------------------------------------- Small Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+  .SmallPanel{
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth1);
+      border-left-width: var(--LeftBorderWidth1);
+      border-top-width: var(--TopBorderWidth1);
+      border-bottom-width: var(--BottomBorderWidth1);
+      /* Margin and padding */
+      margin: var(--PanelMargin1);
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width: var(--PanelWidth-25);
+      height: var(--PanelHeight-50);
+      /* Other Variables */
+      float: left;
+      overflow: hidden;
   }
+/*---------------------------------------------------- Small Panel End ---------------------------------------------------- */
 
-  .TXTFrame h1{
-    font-family: var(--Font2);
-    font-size: var(--TextSize6);
-    color: var(--Color1);
+
+
+/*---------------------------------------------------- Tiny Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+  .TinyPanel{
+      /* border styling */
+      border: solid;
+      border-color: var(--AccentColor1); 
+      border-right-width: var(--RightBorderWidth1);
+      border-left-width: var(--LeftBorderWidth1);
+      border-top-width: var(--TopBorderWidth1);
+      border-bottom-width: var(--BottomBorderWidth1);
+      /* Margin and padding */
+      margin: var(--PanelMargin1);
+      padding: var(--PanelPadding1);
+      /* Background */
+      background: var(--PanelColor1);
+      /* Width and Height */
+      width: var(--PanelWidth-25);
+      height: var(--PanelHeight-25);
+      /* Other Variables */
+      float: left;
+      overflow: hidden;
   }
+/*---------------------------------------------------- Tiny Panel End ---------------------------------------------------- */
 
+
+/*---------------------------------------------------- Tiny Panel Start ---------------------------------------------------- */
+  /* Panel styling */
+
+/*---------------------------------------------------- Tiny Panel End ---------------------------------------------------- */
+
+
+/*---------------------------------------------------- Text Frame Start ---------------------------------------------------- */
+  /* My TXTFrame style is for application inside of html iframes to allow easy text importing into the panels */
+  /* TXTFrame Styling */
+  .TXTFrame{
+      background: var(--PanelColor1);
+  }
+  /* Paragraph Styling */
+  .TXTFrame p {
+      color: var(--TextColor1);
+      font-family: var(--Font1);
+      font-size: var(--FontSize1);
+      line-height: 110%;
+      
+  }
+  /* Header Styling */
+  .TXTFrame h1 {
+      color: var(--TextColor2);
+      font-family: var(--Font2);
+      font-size: var(--FontSize3);
+  }
+/*---------------------------------------------------- Text Frame End ---------------------------------------------------- */
+
+
+
+
+/* =============================================================================================================================================== */
+/* ------------------------------------------------------ Mid Size Changes Start------------------------------------------------------------------- */
+/* ================================================================================================================================================ */
+  @media screen and (max-width: 1024px) {
+      p{
+          font-size: var(--FontSize0);
+      }
+      h1{
+          font-size: var(--FontSize1);
+      }
+      .LargePanel{
+          border-right-width: var(--RightBorderWidth2);
+          border-left-width: var(--LeftBorderWidth2);
+          border-top-width: var(--TopBorderWidth2);
+          border-bottom-width: var(--BottomBorderWidth2);
+          padding: var(--PanelPadding2);
+          width: var(--PanelWidth-66);
+          height: var(--PanelHeight-50);
+      }
+      .TinyPanel{
+          border-right-width: var(--RightBorderWidth2);
+          border-left-width: var(--LeftBorderWidth2);
+          border-top-width: var(--TopBorderWidth2);
+          border-bottom-width: var(--BottomBorderWidth2);
+          padding: var(--PanelPadding2);
+          width: var(--PanelWidth-33);
+          height: var(--PanelHeight-50);
+      }
+      .MediumPanel{
+          border-right-width: var(--RightBorderWidth2);
+          border-left-width: var(--LeftBorderWidth2);
+          border-top-width: var(--TopBorderWidth2);
+          border-bottom-width: var(--BottomBorderWidth2);
+          padding: var(--PanelPadding2);
+          width: var(--PanelWidth-66);
+          height: var(--PanelHeight-50);
+      }
+      .SmallPanel{
+          border-right-width: var(--RightBorderWidth2);
+          border-left-width: var(--LeftBorderWidth2);
+          border-top-width: var(--TopBorderWidth2);
+          border-bottom-width: var(--BottomBorderWidth2);
+          padding: var(--PanelPadding2);
+          width: var(--PanelWidth-33);
+          height: var(--PanelHeight-50);
+      }
+  }
+/* =============================================================================================================================================== */
+/* ------------------------------------------------------ Mid Size Changes End------------------------------------------------------------------- */
+/* ================================================================================================================================================ */
+
+
+
+
+
+/* =============================================================================================================================================== */
+/* ------------------------------------------------------ Small Size Changes Start------------------------------------------------------------------- */
+/* ================================================================================================================================================ */
+  @media screen and (max-width: 800px) {
+      .LargePanel{
+          width: var(--PanelWidth-100);
+          height: var(--PanelHeight-66);
+      }
+      .TinyPanel{
+          width: var(--PanelWidth-50);
+          height: var(--PanelHeight-66);
+      }
+      .MediumPanel{
+          width: var(--PanelWidth-100);
+          height: var(--PanelHeight-66);
+      }
+      .SmallPanel{
+          width: var(--PanelWidth-50);
+          height: var(--PanelHeight-66);
+      }
+  }
+/* =============================================================================================================================================== */
+/* ------------------------------------------------------ Mid Size Changes End------------------------------------------------------------------- */
+/* ================================================================================================================================================ */
